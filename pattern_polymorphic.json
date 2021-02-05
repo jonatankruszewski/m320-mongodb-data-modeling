@@ -1,0 +1,50 @@
+[
+  {
+    "_id": "<objectId>",
+    "format": "<string>",
+    "product_id": "<int>",
+    "title": "<string>",
+    "authors": ["<string>"],
+    "publisher": "<string>",
+    "language": "<string>",
+    "pages": "<int>",
+    "catalogues": {
+      "isbn10": "<string>",
+      "isbn13": "<string>"
+    },
+    "description": "<string>"
+  },
+  {
+    "_id": "<objectId>",
+    "format": "<string>",
+    "product_id": "<int>",
+    "title": "<string>",
+    "desc": "<string>",
+    "authors": ["<string>"],
+    "publisher": "<string>",
+    "language": "<string>",
+    "description": "<string>",
+    "eformats": {
+      "epub": {
+        "pages": "<int>"
+      },
+      "pdf": {
+        "pages": "<int>"
+      }
+    },
+    "isbn10": "<string>"
+  },
+  {
+    "_id": "<objectId>",
+    "format": "<string>",
+    "product_id": "<int>",
+    "title": "<string>",
+    "desc": "<string>",
+    "authors": ["<string>"],
+    "narrator": "<string>",
+    "publisher": "<string>",
+    "language": "<string>",
+    "length_minutes": "<int>",
+    "description": "<string>"
+  }
+]
