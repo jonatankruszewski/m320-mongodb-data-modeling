@@ -29,7 +29,7 @@ Which of the following statements are true about data modeling using MongoDB?
 - Data type in each field can be different
 - Flexible schema DB
 
-### QUIZ
+### QUIZ MongoDB Data Hierarchy
 
 Which of the following statements are true about MongoDB documents?
 
@@ -37,7 +37,7 @@ Which of the following statements are true about MongoDB documents?
 - [ ] MongoDB documents within a collection must have the same fields.
 - [X] MongoDB documents have a flexible schema.
 
-### Constraints in Data Modelign
+### Constraints in Data Modeling
 
 - Ram is super expensive > SSD > HDD
 - Documents can't be larger than 16 mb
@@ -51,7 +51,7 @@ Which of the following statements are true about MongoDB documents?
 
 Your Hardware can limit the way you model your data.
 
-### QUIZ
+### QUIZ Constraints Data modeling
 
 Which of the following is not a usual constraint that would impact your data model for MongoDB?
 
@@ -69,7 +69,7 @@ Which of the following is not a usual constraint that would impact your data mod
 
 - Scenarions, use of your knowladge to delimitate the best design.
 
-### QUIZ
+### QUIZ The data modeling Methodology
 
 Which of the following phases are included in our data modeling methodology for MongoDB?
 
@@ -83,7 +83,7 @@ Which of the following phases are included in our data modeling methodology for 
 - Simplicity: Grouping together. Very agile. Few collections, richer documents.
 - Performance: More atomic, spread out.
 
-### QUIZ
+### QUIZ Model for Simplicity or Performance
 
 Which of the following are use cases in which you should model your data for performance rather than simplicity?
 
@@ -91,16 +91,15 @@ Which of the following are use cases in which you should model your data for per
 - [ ] There is not an applicable design pattern to the solution.
 - [X] It is expected that the solution will be designed with only 10 shards.
 
-### Identifying the Workloads.
+### Identifying the Workloads
 
 - Case: IOT. 100 millions weather sensors.
 - Need: Collect the data. Analyze and make it available to 10 DS.
 - Data can be collected every minute.
 - Data need to be stored at least for 10 years.
 - After identifying the needs, you can creat a table quantifying and quialificating the operations. Actor, CRUD operations, info needed, Operation Type.
-- 
 
-### QUIZ
+### QUIZ Identifying the Workloads
 
 Which of the following is not part of the first phase of the data modeling methodology?
 
@@ -109,7 +108,6 @@ Which of the following is not part of the first phase of the data modeling metho
 - [X] Identifying the relationships between the units of data.
 - [ ] Listing the read operations.
 - [ ] Identifying the durability of each write operation.
-
 
 ### CHAPTER 2
 
@@ -120,12 +118,11 @@ Which of the following is not part of the first phase of the data modeling metho
 - 1 to 1: in single identity.
 - Types and cardinality.
 
-
 Types and cardinalities
 
 1-1: Same document
 1-N: doesn't make sens to embed.
-N-1: 
+N-1:
 N-N:
 
 The usual cardinalities.
@@ -151,7 +148,8 @@ Check all answers that apply:
 - Solution: to embed one entity in the other, usually on the most queried side.
 - Or, referencing, usually in the many side.
 - Cascade deletes are not implemented in MongoDB.
-- 
+
+-
 
 ### QUIZ One-to-Many Relationship
 
@@ -179,7 +177,7 @@ Check all answers that apply:
 
 Consider a many-to-many relationship observed between movies and the actors starring in these movies, for a system that could provide detailed information about either a movie or an actor.
 
-https://university-courses.s3.amazonaws.com/M320/rst-images-prob_movies_actors.png
+<https://university-courses.s3.amazonaws.com/M320/rst-images-prob_movies_actors.png>
 
 Which of the following are true about modeling this many-to-many relationship with the document model in MongoDB?
 
@@ -205,7 +203,7 @@ Check all answers that apply:
 - Refrence. Same identifier in one side, or in the many side.
 - References: create compllexity. Improvess performance on samller dik, samller amount of RAM neeeded.
   
-### QUIZ
+### QUIZ 1 to 1
 
 Problem:
 
@@ -239,7 +237,6 @@ Check all answers that apply:
 - [X] We must take extra care when writing queries that retrieve data on the zillions side
 
 ## CHAPTER 3
-
 
 ### Introduction to patterns
 
@@ -276,7 +273,6 @@ Code after validation: 5d124f9bd971a774b97b5fc7
 - Should or could the information be duplicated? => Bulk updates
 - What is the tolarated or acceptable sateleness. => Updates based on changestreams.
 - Referential integrity? Resolve prevent with change streams or transactions.
-
 
 ### QUIZ Chapter 3: Patterns (Part 1)
 
@@ -426,7 +422,7 @@ Fan out on writes: less common, preparing the data before reading it, when you h
 
 Fan out on writes.
 
-Roll up. Drill down 
+Roll up. Drill down
 Merge data together.
 Goruping data togetter will be a roll up.
 Reports on monthly, daily, weekly, etc.
@@ -485,7 +481,7 @@ Choose the best answer:
 - [ ] Our system performs sums and averages over all elements of certain arrays.
 - [ ] Our system handles 1 million IOT devices
 
-### LAB
+### LAB Pattern
 
 - [X] Option A
 - [X] Option B
@@ -502,7 +498,7 @@ Choose the best answer:
 - Less future technical debt.
 - Might need 2 indexes for same field during migration (-)
 
-### LAB
+### LAB Schema Versioning
 
 - Scenarios A and B
 
@@ -520,7 +516,7 @@ Choose the best answer:
 - parent: "Fashion"
 - Ancestors: ["Swag", "Fashion"]
 
-### QUIZ
+### QUIZ tree patterns
 
 Which of the following scenarios would be ideal to use the Tree Pattern?
 
@@ -563,7 +559,6 @@ Code: 5caab67a9c0aa5e40786f802
 - Outliers. Identify them as exceptions and handle them differently. Social networks, popularity.
 
 ### QUIZ Other Patterns
-
 
 Problem:
 
